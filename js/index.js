@@ -34,6 +34,11 @@ navLink.addEventListener('mouseover', (event) => {
  
  });
 
+ navLink.addEventListener('click', (event) => {
+    //Stop nav links from refreshing the page
+   
+ });
+
  intro.addEventListener('select', (event) => {
     //Recolor selected intro elements
 
@@ -54,7 +59,28 @@ navLink.addEventListener('mouseover', (event) => {
  
  });
 
- bottomImg.addEventListener('onClick', (event) => {
+ bottomImg.addEventListener('click', (event) => {
     //Flip text and image positions on image click
 
+ });
+
+ bottomContent.addEventListener('mouseover', (event) => {
+    //recolor target element
+ 
+ });
+ 
+ buttons.addEventListener('dblclick', (event) => {
+    //Append new child button under target button on double click
+    //Prevent target button from creating a new child button, if one was already created
+ 
+ });
+
+ copyright.addEventListener('dragstart', (event) => {
+    //Change text on dragstart
+ 
+ });
+
+ copyright.addEventListener('dragend', (event) => {
+    //Reset text and change text color on dragend
+ 
  });
