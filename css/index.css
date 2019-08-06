@@ -194,6 +194,9 @@ img {
     padding-top: 10px;
   }
 }
+.main-navigation .nav-container .logo-heading {
+  position: relative;
+}
 @media (max-width: 500px) {
   .main-navigation .nav-container .logo-heading {
     font-size: 3rem;
@@ -214,6 +217,7 @@ img {
   font-size: 1.6rem;
   color: #212529;
   text-decoration: none;
+  position: relative;
 }
 .footer {
   width: 100%;
