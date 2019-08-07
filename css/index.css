@@ -300,6 +300,7 @@ img {
 .home .content-destination {
   width: 75%;
   margin: 0 auto 30px;
+  position: relative;
 }
 @media (max-width: 500px) {
   .home .content-destination {
