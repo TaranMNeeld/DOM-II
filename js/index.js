@@ -3,10 +3,10 @@ const logoHeading = document.querySelector('.logo-heading');
 const links = document.querySelectorAll('a');
 
 //Top content
-const intro = document.querySelector('.intro');
+const introParagraph = document.querySelector('.intro p');
 
 //Top middle content
-const topMiddleContent = document.querySelectorAll('.text-content');
+const topMiddleContent = document.querySelector('.content-section');
 const middleImages = document.querySelectorAll('.img-content');
 
 //Bottom middle content
@@ -26,7 +26,7 @@ const copyright = document.querySelector('.footer');
 //Event listeners
 window.addEventListener('load', (event) => {
    //Add spin animation on window load
-    //TweenMax.to(logoHeading, 2, {rotationY:360});
+    TweenMax.to(logoHeading, 2, {rotationY:360});
 });
 
 links.forEach(link => {
@@ -47,48 +47,42 @@ links.forEach(link => {
      });
 });
 
-//  intro.addEventListener('select', (event) => {
-//     //Recolor selected intro elements
+//Change intro title when hovering over intro paragraph
+ introParagraph.addEventListener('mouseover', (event) => {
+    const introTitle = document.querySelector('.intro h2');
+    introTitle.textContent = "This Is The Intro!";
+ });
 
-//  });
+ //Reset intro title when not hovering over intro paragraph
+ introParagraph.addEventListener('mouseleave', (event) => {
+    const introTitle = document.querySelector('.intro h2');
+    introTitle.textContent = "Welcome To Fun Bus!";
+ })
 
-//  topMiddleContent.addEventListener('resize', (event) => {
-//     //Flip text and image positions on resize
+ window.addEventListener('resize', (event) => {
+    //Flip text and image positions on resize
+    topMiddleContent.style.flexDirection = 'row-reverse';
+ });
 
-//  });
+window.addEventListener('scroll', (event) => {
+    
+});
 
-//  middleImages.addEventListener('scroll', (event) => {
-//     //Spin middle images on scroll
-
-//  });
-
-//  bottomImgTitle.addEventListener('mouseover', (event) => {
-//     //Slide to right side on hover
  
-//  });
+buttons.forEach(button => {
+    button.addEventListener('dblclick', (event) => {
 
-//  bottomImg.addEventListener('click', (event) => {
-//     //Flip text and image positions on image click
+    });
+});
 
-//  });
+ copyright.addEventListener('dragstart', (event) => {
+    //Change color on dragstart
+    const footer = document.querySelector('footer');
+    footer.style.backgroundColor = "red";
+});
 
-//  bottomContent.addEventListener('mouseover', (event) => {
-//     //recolor target element
- 
-//  });
- 
-//  buttons.addEventListener('dblclick', (event) => {
-//     //Append new child button under target button on double click
-//     //Prevent target button from creating a new child button, if one was already created
- 
-//  });
-
-//  copyright.addEventListener('dragstart', (event) => {
-//     //Change text on dragstart
- 
-//  });
-
-//  copyright.addEventListener('dragend', (event) => {
-//     //Reset text and change text color on dragend
- 
-//  });
+copyright.addEventListener('dragend', (event) => {
+    //Reset color on dragend
+    const footer = document.querySelector('footer');
+    footer.style.backgroundColor = " #FFEBCD";
+});
